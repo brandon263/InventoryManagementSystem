@@ -6,8 +6,8 @@ def main():
         print("\nInventory Management System Menu:")
         print("1. Add a product")
         print("2. List products")
-        print("3. Update product quantity")
-        print("4. Exit")
+        print("4. Find a product")
+        print("5. Exit")
 
         choice = input("Chose action: ")
         if choice == '1':
@@ -22,8 +22,12 @@ def main():
             quantity = int(input("Enter the quantity to update: "))
             print(ims.update_product_quantity(product_id, quantity))
         elif choice == '4':
+            product_id = input("Enter the product ID: ")
+            print(ims.find_product(product_id))
+        elif choice == '5':
             print("Goodbye!")
             break
+
         else:
             print("Invalid choice. Please try again.")
 

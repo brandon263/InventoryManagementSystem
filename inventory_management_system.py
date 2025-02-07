@@ -17,3 +17,9 @@ class InventoryManagementSystem:
         if product:
             return product.update_quantity(quantity)
         return "Product not found."
+    
+    def find_product(self, product_id):
+        product = self.inventory.find_product(product_id)
+        if product:
+            return f"Product found: {product}"
+        return "Product not found."
